@@ -1,0 +1,633 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Portfolio Shop</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="nav">
+  <button class="menu" id="menu">
+    LOGO
+  </button>
+  <p class="name">Your shop name</p>
+    <button class="catalog" id="catalog">
+  <span class="catalog-icon">
+    <img src="catalog-icon.png" width="25px" height="25px" class="img-btn">
+  </span>
+  <span class="catalog-name">Catalog</span>
+</button>
+
+  </button>
+
+  <form class="center" id="searchForm">
+    <img class="before-src-input img-btn" src="54481.png" width="35" height="35">
+    <input class="src_input" type="text" placeholder="Search..." id="search_input"/>
+    <button id="search" class="src_but" type="submit">Search</button>
+  </form>
+
+  <button class="mobile-menu-btn"> <img src="7216128.png" class="img-btn"></button>
+  <div class="right">
+    <button id="acc" class="acc_btn right-btn"><img src="User-icon-21.png" width="20px" height="20px" class="img-btn img-btn-icon"></button>
+    <button id="favorite-list" class="favorite-list right-btn"><img class="img-favor-btn img-btn" src="free-heart-icon-3510-thumb.png" width="25px" height="30px"></button>
+    <button id="buy" class="buy_btn right-btn"><img class="img-buy-btn img-btn" src="3081986.png" width="25px" height="25px"></button>
+    <button id="change-theme" class="change-theme-btn right-btn"><img class="change-theme-icon img-btn" src="sun-icon.png" width="27px" height="27px"></button>
+  </div>
+</nav>
+
+<div id="register" class="register account">
+  <h1 class="account-name">Registration</h1>
+  <button id="cancelRegister" class="cancel"><img src="Cancel_icon.png" class="img-btn"></button>
+  <div class="account-container">
+    <label for="email">Enter Your Email: <input id="email" name="email" type="email" required placeholder="Email..."/></label>
+    <label for="new-password">Enter Your Password: <input id="new-password" name="new-password" type="password" pattern="[a-z0-5]" placeholder="Password..."></label>
+    <button class="account-btn">Create account</button>
+  </div>
+  <a id="log-in-a" class="account-a">Log In</a>
+</div>
+
+<div id="log-in" class="log-in account">
+  <h1 class="account-name">Log In</h1>
+  <button id="cancelLogin" class="cancel"><img src="Cancel_icon.png" class="img-btn"></button>
+  <div class="account-container">
+    <label for="email">Enter Your Email: <input id="email" name="email" type="email" required placeholder="Email..."/></label>
+    <label for="new-password">Enter Your Password: <input id="new-password" name="new-password" type="password" pattern="[a-z0-5]" placeholder="Password..."></label>
+    <button class="account-btn">Log in</button>
+  </div>
+  <a id="create" class="account-a">Create an account</a>
+</div>
+
+<div class="products-open">
+  <a class="cancel-product">✕</a>
+  <div class="img-container"></div>
+  <div class="name-price-container"></div>
+  <div class="fav-basket-container"></div>
+</div>
+
+<div class="catalog-list" id="catalog-list">
+
+  <div class="catalog-list-left">
+    <a id="electronic-left" class="catalog-item" data-target="electronic">
+      <img src="Electronic.png" class="img-btn">Electronics
+      <img class="arrow img-btn" src="arrow-image-10.png">
+    </a>
+
+    <a id="games-left" class="catalog-item" data-target="games">
+      <img src="game-pad-joystick.png" class="img-btn">Games
+      <img class="arrow img-btn" src="arrow-image-10.png">
+    </a>
+
+    <a id="car-left" class="catalog-item" data-target="car">
+      <img src="car-icon-png-25.png" class="img-btn">Car
+      <img class="arrow img-btn" src="arrow-image-10.png">
+    </a>
+
+    <a id="sport-left" class="catalog-item" data-target="sport">
+      <img src="sport.png" class="img-btn">Sport
+      <img class="arrow img-btn" src="arrow-image-10.png">
+    </a>
+
+    <a id="health-left" class="catalog-item" data-target="health">
+      <img src="free-heart-icon-3510-thumb.png" class="img-btn">Health
+      <img class="arrow img-btn" src="arrow-image-10.png">
+    </a>
+
+    <a id="everyday-left" class="catalog-item" data-target="everyday">
+      <img src="house_icon_187945.png" class="img-btn">Everyday life
+      <img class="arrow img-btn" src="arrow-image-10.png">
+    </a>
+
+    <a id="hyg-left" class="catalog-item" data-target="hygiene">
+      <img src="hig.png" class="img-btn">Hygiene
+      <img class="arrow img-btn" src="arrow-image-10.png">
+    </a>
+
+    <a id="cloth-left" class="catalog-item" data-target="cloth">
+      <img src="cloth.png" class="img-btn">Cloth
+      <img class="arrow img-btn" src="arrow-image-10.png">
+    </a>
+  </div>
+
+  <div class="catalog-list-center">
+  <div class="catalog-list-center-item">
+
+    <div id="electronic-center" class="catalog-item-center">
+      <a class="catalog-item" data-category="laptop">
+        <img src="free-laptop-icon.png" class="img-btn">Laptop
+        <img class="arrow img-btn" src="arrow-image-10.png">
+      </a>
+      <a class="catalog-item" data-category="phone">
+        <img src="free-mobile-phone-icon.png" class="img-btn">Phone
+        <img class="arrow img-btn" src="arrow-image-10.png">
+      </a>
+      <a class="catalog-item" data-category="camera">
+        <img src="camera-icon.png" class="img-btn">Camera
+        <img class="arrow img-btn" src="arrow-image-10.png">
+      </a>
+      <a class="catalog-item" data-category="soldering">
+        <img src="soldering.png" class="img-btn">Soldering
+        <img class="arrow img-btn" src="arrow-image-10.png">
+      </a>
+    </div>
+
+    <div id="games-center" class="catalog-item-center">
+      <a class="catalog-item" data-category="plate-games">
+        <img src="game-pad-joystick.png" class="img-btn">Plate game
+        <img class="arrow img-btn" src="arrow-image-10.png">
+      </a>
+      <a class="catalog-item" data-category="gaming-laptop">
+        <img src="free-laptop-icon.png" class="img-btn">Gaming Laptop
+        <img class="arrow img-btn" src="arrow-image-10.png">
+      </a>
+      <a class="catalog-item" data-category="outside">
+        <img src="sport-icon.png" class="img-btn">Ball
+        <img class="arrow img-btn" src="arrow-image-10.png">
+      </a>
+    </div>
+
+    <div id="car-center" class="catalog-item-center">
+      <a class="catalog-item" data-category="tire">
+        <img src="tire.png" class="img-btn">Tire
+        <img class="arrow img-btn" src="arrow-image-10.png">
+      </a>
+    </div>
+
+    <div id="sport-center" class="catalog-item-center">
+      <a class="catalog-item" data-category="gym">
+        <img src="sport.png" class="img-btn">Gym
+        <img class="arrow img-btn" src="arrow-image-10.png">
+      </a>
+      <a class="catalog-item" data-category="outside-sport">
+        <img src="sport-icon.png" class="img-btn">Sport game
+        <img class="arrow img-btn" src="arrow-image-10.png">
+      </a>
+    </div>
+
+    <div id="health-center" class="catalog-item-center">
+      <a class="catalog-item" data-category="soaps">
+        <img src="hig.png" class="img-btn">Soap
+        <img class="arrow img-btn" src="arrow-image-10.png">
+      </a>
+      <a class="catalog-item" data-category="psyshics">
+        <img src="sport.png" class="img-btn">Gym
+        <img class="arrow img-btn" src="arrow-image-10.png">
+      </a>
+    </div>
+
+    <div id="everyday-center" class="catalog-item-center">
+      <a class="catalog-item" data-category="pillows">
+        <img src="bed.png" class="img-btn">Bedding
+        <img class="arrow img-btn" src="arrow-image-10.png">
+      </a>
+      <a class="catalog-item" data-category="repair">
+        <img src="house_icon_187945.png" class="img-btn">Conciliary
+        <img class="arrow img-btn" src="arrow-image-10.png">
+      </a>
+      <a class="catalog-item" data-category="other">
+        <img src="flower.png" class="img-btn">Flower
+        <img class="arrow img-btn" src="arrow-image-10.png">
+      </a>
+    </div>
+
+    <div id="hygiene-center" class="catalog-item-center">
+      <a class="catalog-item" data-category="soaps-hyg">
+        <img src="hig.png" class="img-btn">Soap
+        <img class="arrow img-btn" src="arrow-image-10.png">
+      </a>
+    </div>
+
+    <div id="cloth-center" class="catalog-item-center">
+      <a class="catalog-item" data-category="t-shirt">
+        <img src="cloth.png" class="img-btn">Top clothing
+        <img class="arrow img-btn" src="arrow-image-10.png">
+      </a>
+      <a class="catalog-item" data-category="pants">
+        <img src="pants.png" class="img-btn">Pants
+        <img class="arrow img-btn" src="arrow-image-10.png">
+      </a>
+      <a class="catalog-item" data-category="bags">
+        <img src="bags.png" class="img-btn">Bags
+        <img class="arrow img-btn" src="arrow-image-10.png">
+      </a>
+    </div>
+
+  </div>
+</div>
+
+
+  <div class="catalog-list-right">
+  <div class="catalog-list-right-item">
+
+    <div id="electronic-right">
+      <div id="laptop" class="catalog-item-right">
+        <a class="catalog-item" data-category="laptop" data-product="asus">
+          <img src="free-laptop-icon.png" class="img-btn">Asus
+          <img class="arrow img-btn" src="54481.png">
+        </a>
+      </div>
+      <div id="phone" class="catalog-item-right">
+        <a class="catalog-item" data-category="phone" data-product="iphone">
+          <img src="free-mobile-phone-icon.png" class="img-btn">Iphone
+          <img class="arrow img-btn" src="54481.png">
+        </a>
+        <a class="catalog-item" data-category="phone" data-product="redmi">
+          <img src="free-mobile-phone-icon.png" class="img-btn">Redmi
+          <img class="arrow img-btn" src="54481.png">
+        </a>
+      </div>
+      <div id="camera" class="catalog-item-right">
+        <a class="catalog-item" data-category="camera" data-product="canon">
+          <img src="camera-icon.png" class="img-btn">Canon
+          <img class="arrow img-btn" src="54481.png">
+        </a>
+      </div>
+      <div id="soldering" class="catalog-item-right">
+        <a class="catalog-item" data-category="soldering" data-product="solomon">
+          <img src="soldering.png" class="img-btn">Solomon
+          <img class="arrow img-btn" src="54481.png">
+        </a>
+      </div>
+    </div>
+
+    <div id="games-right">
+      <div id="gaming-laptop" class="catalog-item-right">
+        <a class="catalog-item" data-category="laptop" data-product="asus">
+          <img src="free-laptop-icon.png" class="img-btn">Asus
+          <img class="arrow img-btn" src="54481.png">
+        </a>
+      </div>
+      <div id="plate-games" class="catalog-item-right">
+        <a class="catalog-item" data-category="plate-games" data-product="chess">
+          <img src="game-pad-joystick.png" class="img-btn">Chess
+          <img class="arrow img-btn" src="54481.png">
+        </a>
+      </div>
+      <div id="outside" class="catalog-item-right">
+        <a class="catalog-item" data-category="ball" data-product="football">
+          <img src="sport-icon.png" class="img-btn">Football
+          <img class="arrow img-btn" src="54481.png">
+        </a>
+      </div>
+    </div>
+
+    <div id="car-right" class="catalog-item-right">
+      <a class="catalog-item" data-category="tire" data-product="winter-tire">
+        <img src="tire.png" class="img-btn">Winter tire
+        <img class="arrow img-btn" src="54481.png">
+      </a>
+    </div>
+
+    <div id="sport-right">
+      <div id="gym" class="catalog-item-right">
+        <a class="catalog-item" data-category="gym" data-product="dumbbell">
+          <img src="sport.png" class="img-btn">Dumbbell
+          <img class="arrow img-btn" src="54481.png">
+        </a>
+      </div>
+      <div id="outside-sport" class="catalog-item-right">
+        <a class="catalog-item" data-category="ball" data-product="football">
+          <img src="sport-icon.png" class="img-btn">Football
+          <img class="arrow img-btn" src="54481.png">
+        </a>
+      </div>
+    </div>
+
+    <div id="health-right">
+      <div id="soaps" class="catalog-item-right">
+        <a class="catalog-item" data-category="soap" data-product="dove">
+          <img src="hig.png" class="img-btn">Dove
+          <img class="arrow img-btn" src="54481.png">
+        </a>
+      </div>
+      <div id="psyshics" class="catalog-item-right">
+        <a class="catalog-item" data-category="gym" data-product="dumbbell">
+          <img src="sport.png" class="img-btn">Dumbbell
+          <img class="arrow img-btn" src="54481.png">
+        </a>
+      </div>
+    </div>
+
+    <div id="everyday-right">
+      <div id="pillows" class="catalog-item-right">
+        <a class="catalog-item" data-category="pillow" data-product="pillow">
+          <img src="bed.png" class="img-btn">Pillow
+          <img class="arrow img-btn" src="54481.png">
+        </a>
+      </div>
+      <div id="repair" class="catalog-item-right">
+        <a class="catalog-item" data-category="repair" data-product="repair">
+          <img src="house_icon_187945.png" class="img-btn">Repair
+          <img class="arrow img-btn" src="54481.png">
+        </a>
+      </div>
+      <div id="other" class="catalog-item-right">
+        <a class="catalog-item" data-category="other" data-product="other">
+          <img src="house_icon_187945.png" class="img-btn">Other
+          <img class="arrow img-btn" src="54481.png">
+        </a>
+      </div>
+    </div>
+
+    <div id="hygiene-right">
+      <div id="soaps-hyg" class="catalog-item-right">
+        <a class="catalog-item" data-category="soap" data-product="dove">
+          <img src="hig.png" class="img-btn">Dove
+          <img class="arrow img-btn" src="54481.png">
+        </a>
+      </div>
+    </div>
+
+    <div id="cloth-right">
+      <div id="t-shirt" class="catalog-item-right">
+        <a class="catalog-item" data-category="t-shirt" data-product="t-shirt">
+          <img src="cloth.png" class="img-btn">T-Shirt
+          <img class="arrow img-btn" src="54481.png">
+        </a>
+      </div>
+      <div id="hoodie" class="catalog-item-right">
+        <a class="catalog-item" data-category="hoodie" data-product="hoodie">
+          <img src="cloth.png" class="img-btn">Hoodie
+          <img class="arrow img-btn" src="54481.png">
+        </a>
+      </div>
+      <div id="overshirt" class="catalog-item-right">
+        <a class="catalog-item" data-category="overshirt" data-product="overshirt">
+          <img src="cloth.png" class="img-btn">Overshirt
+          <img class="arrow img-btn" src="54481.png">
+        </a>
+      </div>
+      <div id="pants" class="catalog-item-right">
+        <a class="catalog-item" data-category="jeans" data-product="jeans">
+          <img src="cloth.png" class="img-btn">Jeans
+          <img class="arrow img-btn" src="54481.png">
+        </a>
+      </div>
+      <div id="bags" class="catalog-item-right">
+        <a class="catalog-item" data-category="bags" data-product="bags">
+          <img src="bags.png" class="img-btn">Bag
+          <img class="arrow img-btn" src="54481.png">
+        </a>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+</div>
+
+
+<div class="favorite-list-hover" id="favorite-list-hover">
+</div>
+
+<div class="basket-list-hover" id="basket-list-hover">
+</div>
+
+<div class="page">
+
+<aside class="left-panel">
+
+<section class="filter price-filter">
+  <h3 class="filter-title">Price, $</h3>
+
+  <div class="price-inputs">
+    <input type="number" id="minInput" value="0">
+    <span>—</span>
+    <input type="number" id="maxInput" value="5000">
+  </div>
+
+  <div class="range-slider">
+    <div class="slider-track"></div>
+
+    <input type="range" id="minRange" min="0" max="5000" value="0">
+    <input type="range" id="maxRange" min="0" max="5000" value="5000">
+  </div>
+</section>
+
+
+
+  <section class="filter">
+    <h3 class="filter-title">Delivery</h3>
+
+    <label class="checkbox">
+      <input type="checkbox" id="fastDelivery"> Fast delivery
+    </label>
+    <label class="checkbox">
+      <input type="checkbox" id="selfPickup"> Self pickup
+    </label>
+  </section>
+
+  <section class="filter">
+    <h3 class="filter-title">Condition</h3>
+
+    <label class="checkbox">
+      <input type="checkbox" id="new"> New
+    </label>
+    <label class="checkbox">
+      <input type="checkbox" id="used"> Used
+    </label>
+  </section>
+
+  <section class="about-us">
+    <h3 class="title-about-us">About us</h3>
+    <button class="tech-support"><img src="tech-support.png" class="about-us-img-tech img-btn"> - technical support</button>
+
+    <button class="about-us-btn"><img src="instagram-53.png" class="about-us-img img-btn"><label> - Your nickname</label></button>
+    <button class="about-us-btn"><img src="59439.png" class="about-us-img img-btn"><label> - Your nickname</label></button>
+    <button class="about-us-btn"><img src="x-icon.png" class="about-us-img img-btn"><label> - Your nickname</label></button>
+    <button class="about-us-btn"><img src="free-youtube-icon-123-thumb.png" class="about-us-img img-btn"><label> - Your nickname</label></button>
+    <button class="about-us-btn"><img src="1946552.png" class="about-us-img img-btn"><label> - Your nickname</label></button>
+
+  </section>
+
+</aside>
+
+<main class="products-area">
+  <div class="products-list">
+    <div class="product-card self" data-category="hoodie" data-price="452.45" data-product="hoodie">
+      <img class="product-img" src="23927030_54038239_1000.png">
+      <button class="favorite-btn card-btn" data-id="ITEM_1"><img src="free-heart-icon-3510-thumb.png" width="25px" height="25px" class="img-btn fav-img"></button>
+      <button class="buy-btn card-btn"><img width="25px" height="25px" class="buy-btn-img card-btn-img img-btn" src="3081986.png"></button>
+      <p class="product-name">Off-white hoodie</p>
+      <p class="product-price">$452.45</p>
+    </div>
+    <div class="product-card fast" data-category="laptop" data-price="999.52" data-product="asus">
+      <img class="product-img" src="laptop.png">
+      <button class="favorite-btn card-btn" data-id="ITEM_2"><img src="free-heart-icon-3510-thumb.png" width="25px" height="25px" class="img-btn fav-img"></button>
+      <button class="buy-btn card-btn" data-id="ITEM_2"><img width="25px" height="25px" class="buy-btn-img card-btn-img img-btn" src="3081986.png"></button>
+      <p class="product-name">Asus tuf gaming</p>
+      <p class="product-price">$999.52</p>
+    </div>
+    <div class="product-card fast" data-category="phone" data-price="799.99" data-product="iphone">
+      <img class="product-img" src="gold-1-700x700.png">
+      <button class="favorite-btn card-btn" data-id="ITEM_3"><img src="free-heart-icon-3510-thumb.png" width="25px" height="25px" class="img-btn fav-img"></button>
+      <button class="buy-btn card-btn" data-id="ITEM_3"><img width="25px" height="25px" class="buy-btn-img card-btn-img img-btn" src="3081986.png"></button>
+      <p class="product-name">Iphone 14 pro max</p>
+      <p class="product-price">$799.99</p>
+    </div>
+    <div class="product-card" data-category="soap" data-price="2.00" data-product="dove">
+      <img class="product-img" src="dove-beauty-bar-soap-white-135g-2.png">
+      <button class="favorite-btn card-btn" data-id="ITEM_4"><img src="free-heart-icon-3510-thumb.png" width="25px" height="25px" class="img-btn fav-img"></button>
+      <button class="buy-btn card-btn" data-id="ITEM_4"><img width="25px" height="25px" class="buy-btn-img card-btn-img img-btn" src="3081986.png"></button>
+      <p class="product-name">Dove soap</p>
+      <p class="product-price">$2.00</p>
+    </div>
+    <div class="product-card self" data-category="other" data-price="21.60" data-product="other">
+      <img class="product-img" src="Praktyczne-wiadro-15-l-do-roznych-zastosowan..png">
+      <button class="favorite-btn card-btn" data-id="ITEM_5"><img src="free-heart-icon-3510-thumb.png" width="25px" height="25px" class="img-btn fav-img"></button>
+      <button class="buy-btn card-btn" data-id="ITEM_5"><img width="25px" height="25px" class="buy-btn-img card-btn-img img-btn" src="3081986.png"></button>
+      <p class="product-name">Iron Bucket B/U</p>
+      <p class="product-price">$21.60</p>
+    </div>
+    <div class="product-card" data-category="soldering" data-price="51.89" data-product="solomon">
+      <img class="product-img" src="0502-1-3000.png">
+      <button class="favorite-btn card-btn" data-id="ITEM_6"><img src="free-heart-icon-3510-thumb.png" width="25px" height="25px" class="img-btn fav-img"></button>
+      <button class="buy-btn card-btn" data-id="ITEM_6"><img width="25px" height="25px" class="buy-btn-img card-btn-img img-btn" src="3081986.png"></button>
+      <p class="product-name">Soldering Iron</p>
+      <p class="product-price">$51.89</p>
+    </div>
+    <div class="product-card fast" data-category="gym" data-price="15.24" data-product="dumbbell">
+      <img class="product-img" src="weight-training-crosstraining-hex-dumbbell-10-kg-black.png">
+      <button class="favorite-btn card-btn" data-id="ITEM_7"><img src="free-heart-icon-3510-thumb.png" width="25px" height="25px" class="img-btn fav-img"></button>
+      <button class="buy-btn card-btn" data-id="ITEM_7"><img width="25px" height="25px" class="buy-btn-img card-btn-img img-btn" src="3081986.png"></button>
+      <p class="product-name">Dumbbell 10kg B/U</p>
+      <p class="product-price">$15.24</p>
+    </div>
+    <div class="product-card fast" data-category="tire" data-price="99.99" data-product="winter-tire">
+      <img class="product-img" src="montreal-eco-2-rightwhole-tiresDetailsFormat.png">
+      <button class="favorite-btn card-btn" data-id="ITEM_8"><img src="free-heart-icon-3510-thumb.png" width="25px" height="25px" class="img-btn fav-img"></button>
+      <button class="buy-btn card-btn" data-id="ITEM_8"><img width="25px" height="25px" class="buy-btn-img card-btn-img img-btn" src="3081986.png"></button>
+      <p class="product-name">Winter Tire</p>
+      <p class="product-price">$99.99</p>
+    </div>
+    <div class="product-card" data-category="camera" data-price="750.12" data-product="canon">
+      <img class="product-img" src="camera.png">
+      <button class="favorite-btn card-btn" data-id="ITEM_9"><img src="free-heart-icon-3510-thumb.png" width="25px" height="25px" class="img-btn fav-img"></button>
+      <button class="buy-btn card-btn" data-id="ITEM_9"><img width="25px" height="25px" class="buy-btn-img card-btn-img img-btn" src="3081986.png"></button>
+      <p class="product-name">Canon Sony</p>
+      <p class="product-price">$750.12</p>
+    </div>
+    <div class="product-card fast" data-category="other" data-price="1.31" data-product="other">
+      <img class="product-img" src="download.png">
+      <button class="favorite-btn card-btn" data-id="ITEM_10"><img src="free-heart-icon-3510-thumb.png" width="25px" height="25px" class="img-btn fav-img"></button>
+      <button class="buy-btn card-btn" data-id="ITEM_10"><img width="25px" height="25px" class="buy-btn-img card-btn-img img-btn" src="3081986.png"></button>
+      <p class="product-name">Mug</p>
+      <p class="product-price">$1.31</p>
+    </div>
+    <div class="product-card fast" data-category="repair" data-price="0.69" data-product="repair">
+      <img class="product-img" src="download2.png">
+      <button class="favorite-btn card-btn" data-id="ITEM_11"><img src="free-heart-icon-3510-thumb.png" width="25px" height="25px" class="img-btn fav-img"></button>
+      <button class="buy-btn card-btn" data-id="ITEM_11"><img width="25px" height="25px" class="buy-btn-img card-btn-img img-btn" src="3081986.png"></button>
+      <p class="product-name">Nails</p>
+      <p class="product-price">$0.69</p>
+    </div>
+    <div class="product-card" data-category="plate-games" data-price="6.99" data-product="chess">
+      <img class="product-img" src="download4.png">
+      <button class="favorite-btn card-btn" data-id="ITEM_12"><img src="free-heart-icon-3510-thumb.png" width="25px" height="25px" class="img-btn fav-img"></button>
+      <button class="buy-btn card-btn" data-id="ITEM_12"><img width="25px" height="25px" class="buy-btn-img card-btn-img img-btn" src="3081986.png"></button>
+      <p class="product-name">Chess plate</p>
+      <p class="product-price">$6.99</p>
+    </div>
+    <div class="product-card" data-category="bags" data-price="24.99" data-product="bags">
+      <img class="product-img" src="download5.png">
+      <button class="favorite-btn card-btn" data-id="ITEM_13"><img src="free-heart-icon-3510-thumb.png" width="25px" height="25px" class="img-btn fav-img"></button>
+      <button class="buy-btn card-btn" data-id="ITEM_13"><img width="25px" height="25px" class="buy-btn-img card-btn-img img-btn" src="3081986.png"></button>
+      <p class="product-name">Kitbag B/U</p>
+      <p class="product-price">$24.99</p>
+    </div>
+    <div class="product-card fast self" data-category="ball" data-price="15.00" data-product="football">
+      <img class="product-img" src="images.png">
+      <button class="favorite-btn card-btn" data-id="ITEM_14"><img src="free-heart-icon-3510-thumb.png" width="25px" height="25px" class="img-btn fav-img"></button>
+      <button class="buy-btn card-btn" data-id="ITEM_14"><img width="25px" height="25px" class="buy-btn-img card-btn-img img-btn" src="3081986.png"></button>
+      <p class="product-name">Football Ball</p>
+      <p class="product-price">$15.00</p>
+    </div>
+    <div class="product-card self" data-category="jeans" data-price="289.99" data-product="jeans">
+      <img class="product-img" src="fc0679acf783bac59745828cef1b1edc.png">
+      <button class="favorite-btn card-btn" data-id="ITEM_15"><img src="free-heart-icon-3510-thumb.png" width="25px" height="25px" class="img-btn fav-img"></button>
+      <button class="buy-btn card-btn" data-id="ITEM_15"><img width="25px" height="25px" class="buy-btn-img card-btn-img img-btn" src="3081986.png"></button>
+      <p class="product-name">Baggy Jeans</p>
+      <p class="product-price">$289.99</p>
+    </div>
+    <div class="product-card" data-category="other" data-price="9.32" data-product="other">
+      <img class="product-img" src="images2.png">
+      <button class="favorite-btn card-btn" data-id="ITEM_16"><img src="free-heart-icon-3510-thumb.png" width="25px" height="25px" class="img-btn fav-img"></button>
+      <button class="buy-btn card-btn" data-id="ITEM_16"><img width="25px" height="25px" class="buy-btn-img card-btn-img img-btn" src="3081986.png"></button>
+      <p class="product-name">Plastic Flower</p>
+      <p class="product-price">$9.32</p>
+    </div>
+    <div class="product-card self" data-category="pillow" data-price="32.73" data-product="pillow">
+      <img class="product-img" src="pngtree_rectangular_pillow_mockup_realistic_style_png_image_12017139.png">
+      <button class="favorite-btn card-btn" data-id="ITEM_17"><img src="free-heart-icon-3510-thumb.png" width="25px" height="25px" class="img-btn fav-img"></button>
+      <button class="buy-btn card-btn" data-id="ITEM_17"><img width="25px" height="25px" class="buy-btn-img card-btn-img img-btn" src="3081986.png"></button>
+      <p class="product-name">Pillow</p>
+      <p class="product-price">$32.73</p>
+    </div>
+    <div class="product-card" data-category="other" data-price="3.12" data-product="other">
+      <img class="product-img" src="pngtree-black-and-gold-fountain-pen-png-image_11927367.png">
+      <button class="favorite-btn card-btn" data-id="ITEM_18"><img src="free-heart-icon-3510-thumb.png" width="25px" height="25px" class="img-btn fav-img"></button>
+      <button class="buy-btn card-btn" data-id="ITEM_18"><img width="25px" height="25px" class="buy-btn-img card-btn-img img-btn" src="3081986.png"></button>
+      <p class="product-name">Gold Pen</p>
+      <p class="product-price">$3.12</p>
+    </div>
+    <div class="product-card self" data-category="pillow" data-price="6.12" data-product="pillow">
+      <img class="product-img" src="s-l1200.png">
+      <button class="favorite-btn card-btn" data-id="ITEM_19"><img src="free-heart-icon-3510-thumb.png" width="25px" height="25px" class="img-btn fav-img"></button>
+      <button class="buy-btn card-btn" data-id="ITEM_19"><img width="25px" height="25px" class="buy-btn-img card-btn-img img-btn" src="3081986.png"></button>
+      <p class="product-name">Angry Birds Pig</p>
+      <p class="product-price">$6.12</p>
+    </div>
+    <div class="product-card" data-category="overshirt" data-price="451.52" data-product="overshirt">
+      <img class="product-img" src="8057275755076_20.png">
+      <button class="favorite-btn card-btn" data-id="ITEM_20"><img src="free-heart-icon-3510-thumb.png" width="25px" height="25px" class="img-btn fav-img"></button>
+      <button class="buy-btn card-btn" data-id="ITEM_20"><img width="25px" height="25px" class="buy-btn-img card-btn-img img-btn" src="3081986.png"></button>
+      <p class="product-name">Woolrich Overshirt</p>
+      <p class="product-price">$451.52</p>
+    </div>
+    <div class="product-card self" data-category="t-shirt" data-price="123.52" data-product="t-shirt">
+      <img class="product-img" src="38513948669021.png">
+      <button class="favorite-btn card-btn" data-id="ITEM_21"><img src="free-heart-icon-3510-thumb.png" width="25px" height="25px" class="img-btn fav-img"></button>
+      <button class="buy-btn card-btn" data-id="ITEM_21"><img width="25px" height="25px" class="buy-btn-img card-btn-img img-btn" src="3081986.png"></button>
+      <p class="product-name">Tokyo Ghoul T-Shirt</p>
+      <p class="product-price">$123.52</p>
+    </div>
+    <div class="product-card self" data-category="phone" data-price="80.99" data-product="redmi">
+      <img class="product-img" src="210629160014504689.png">
+      <button class="favorite-btn card-btn" data-id="ITEM_22"><img src="free-heart-icon-3510-thumb.png" width="25px" height="25px" class="img-btn fav-img"></button>
+      <button class="buy-btn card-btn" data-id="ITEM_22"><img width="25px" height="25px" class="buy-btn-img card-btn-img img-btn" src="3081986.png"></button>
+      <p class="product-name">Redmi 9A B/U</p>
+      <p class="product-price">$80.99</p>
+    </div>
+    <div class="product-card self" data-category="bags" data-price="89.99" data-product="bags">
+      <img class="product-img" src="ibanez-iab541-pk.png">
+      <button class="favorite-btn card-btn" data-id="ITEM_23"><img src="free-heart-icon-3510-thumb.png" width="25px" height="25px" class="img-btn fav-img"></button>
+      <button class="buy-btn card-btn" data-id="ITEM_23"><img width="25px" height="25px" class="buy-btn-img card-btn-img img-btn" src="3081986.png"></button>
+      <p class="product-name">Guitar Bag B/U</p>
+      <p class="product-price">$89.99</p>
+    </div>
+    <div class="product-card" data-category="other" data-price="40.82" data-product="other">
+      <img class="product-img" src="41KP9KoEiEL._AC_UF1000,1000_QL80_.png">
+      <button class="favorite-btn card-btn" data-id="ITEM_24"><img src="free-heart-icon-3510-thumb.png" width="25px" height="25px" class="img-btn fav-img"></button>
+      <button class="buy-btn card-btn" data-id="ITEM_24"><img width="25px" height="25px" class="buy-btn-img card-btn-img img-btn" src="3081986.png"></button>
+      <p class="product-name">Gas Can</p>
+      <p class="product-price">$40.82</p>
+    </div>
+  </div>
+
+<div class="alert-chat-wrap">
+  <div id="alert-fav-add" class="alert-chat add">❤️added to favorite</div>
+  <div id="alert-fav-remove" class="alert-chat remove">💔Removed with favorite</div>
+</div>
+
+<div class="alert-chat-wrap">
+  <div id="alert-basket-add" class="alert-chat add">🧺added to basket</div>
+  <div id="alert-basket-remove" class="alert-chat remove">🧺Removed with basket</div>
+</div>
+
+</main>
+
+</div>
+
+</body>
+<script src="./script.js"></script>
+</html>
